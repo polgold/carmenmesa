@@ -127,14 +127,6 @@ export default function Home() {
             <Reveal delay={0.3}>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                 <a
-                  href="https://patrasnipatomarimpulso.com/"
-                  target="_blank"
-                  rel="noopener"
-                  className="text-paper link-underline"
-                >
-                  Sitio oficial
-                </a>
-                <a
                   href="https://www.instagram.com/patrasnipatomarimpulso"
                   target="_blank"
                   rel="noopener"
