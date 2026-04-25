@@ -50,7 +50,21 @@ export function Footer() {
       <div className="border-t border-line">
         <div className="mx-auto max-w-7xl px-6 lg:px-12 py-6 flex flex-col md:flex-row gap-3 items-start md:items-center justify-between text-xs text-muted-2 tracking-wide">
           <span>© {new Date().getFullYear()} Carmen Mesa · Todos los derechos reservados</span>
-          <span className="font-display italic text-muted">arte vivo desde Andalucía</span>
+          <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span className="font-display italic text-muted">arte vivo desde Andalucía</span>
+            <span className="hidden md:inline text-muted-2">·</span>
+            <span>
+              Diseño por{" "}
+              <a
+                href="https://exitmedia.com.ar"
+                target="_blank"
+                rel="noopener"
+                className="text-paper link-underline"
+              >
+                Exit Media
+              </a>
+            </span>
+          </span>
         </div>
       </div>
     </footer>
