@@ -277,7 +277,7 @@ export default function AgendaPage() {
                       alt={w.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.06]"
+                      className="object-cover transition-transform duration-700 ease-curtain group-hover:scale-[1.06]"
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />

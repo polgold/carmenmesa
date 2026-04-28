@@ -47,8 +47,16 @@ export default function RootLayout({
       className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-3 focus:bg-paper focus:text-ink focus:text-[12px] focus:uppercase focus:tracking-[0.28em] focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
+        >
+          Saltar al contenido
+        </a>
         <Nav />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

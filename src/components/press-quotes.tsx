@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import { EASE_CURTAIN } from "@/lib/motion";
 
 const quotes = [
   { quote: "Una española para adorar.", source: "La Nación" },
@@ -10,8 +11,6 @@ const quotes = [
     source: "Festival de Sevilla",
   },
 ];
-
-const EASE = [0.23, 1, 0.32, 1] as const;
 
 export function PressQuotes() {
   const reduce = useReducedMotion();
@@ -23,7 +22,7 @@ export function PressQuotes() {
           initial={reduce ? false : { opacity: 0, y: 16 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
-          transition={{ duration: 0.7, delay: i * 0.12, ease: EASE }}
+          transition={{ duration: 0.7, delay: i * 0.12, ease: EASE_CURTAIN }}
           className="flex flex-col gap-6 h-full"
         >
           <motion.span
@@ -36,7 +35,7 @@ export function PressQuotes() {
             transition={{
               duration: 0.7,
               delay: i * 0.12 + 0.15,
-              ease: EASE,
+              ease: EASE_CURTAIN,
             }}
             className="font-display text-rojo text-6xl leading-none inline-block"
           >

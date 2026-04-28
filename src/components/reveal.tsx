@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion, type HTMLMotionProps } from "motion/react";
 import type { ReactNode } from "react";
+import { EASE_CURTAIN } from "@/lib/motion";
 
 type RevealProps = HTMLMotionProps<"div"> & {
   children: ReactNode;
@@ -26,7 +27,7 @@ export function Reveal({
       transition={{
         duration: 0.7,
         delay,
-        ease: [0.23, 1, 0.32, 1],
+        ease: EASE_CURTAIN,
       }}
       {...rest}
     >
@@ -62,8 +63,9 @@ export function RevealLetters({
             transition={{
               duration: 0.7,
               delay: delay + i * 0.06,
-              ease: [0.23, 1, 0.32, 1],
+              ease: EASE_CURTAIN,
             }}
+
           >
             {w}
           </motion.span>
