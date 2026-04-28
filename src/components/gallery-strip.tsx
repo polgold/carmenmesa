@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { EASE_CURTAIN, EASE_EXIT } from "@/lib/motion";
 
 type Photo = { src: string; alt: string; aspect?: string };
 
@@ -36,7 +37,7 @@ export function GalleryStrip({ photos }: { photos: Photo[] }) {
             transition={{
               duration: 0.7,
               delay: i * 0.08,
-              ease: [0.23, 1, 0.32, 1],
+              ease: EASE_CURTAIN,
             }}
             className={[
               "relative overflow-hidden bg-surface group",
@@ -57,7 +58,7 @@ export function GalleryStrip({ photos }: { photos: Photo[] }) {
               sizes="(max-width: 768px) 50vw, 25vw"
               quality={88}
               priority={i < 2}
-              className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.06]"
+              className="object-cover transition-transform duration-700 ease-curtain group-hover:scale-[1.06]"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] p-4 md:p-5 text-paper text-[11px] uppercase tracking-[0.24em] opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500">
@@ -144,10 +145,10 @@ function Lightbox({
               ? { opacity: 0 }
               : {
                   opacity: 0,
-                  transition: { duration: 0.22, ease: [0.4, 0, 1, 1] },
+                  transition: { duration: 0.22, ease: EASE_EXIT },
                 }
           }
-          transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
+          transition={{ duration: 0.35, ease: EASE_CURTAIN }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/95 backdrop-blur-sm"
           onClick={onClose}
           onTouchStart={onTouchStart}
@@ -205,10 +206,10 @@ function Lightbox({
                 : {
                     opacity: 0,
                     scale: 0.98,
-                    transition: { duration: 0.22, ease: [0.4, 0, 1, 1] },
+                    transition: { duration: 0.22, ease: EASE_EXIT },
                   }
             }
-            transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
+            transition={{ duration: 0.45, ease: EASE_CURTAIN }}
             className="relative w-[92vw] h-[78vh] md:w-[82vw] md:h-[82vh] max-w-[1400px]"
             onClick={(e) => e.stopPropagation()}
           >

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
+import { EASE_CURTAIN } from "@/lib/motion";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -27,7 +28,7 @@ export function Hero() {
           className="eyebrow text-paper-soft mb-6"
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
+          transition={{ duration: 0.7, delay: 0.15, ease: EASE_CURTAIN }}
         >
           Bailaora andaluza · Flamenco
         </motion.p>
@@ -38,7 +39,7 @@ export function Hero() {
               className="block"
               initial={reduce ? false : { y: "110%" }}
               animate={reduce ? undefined : { y: 0 }}
-              transition={{ duration: 0.85, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
+              transition={{ duration: 0.85, delay: 0.3, ease: EASE_CURTAIN }}
             >
               Carmen
             </motion.span>
@@ -48,7 +49,7 @@ export function Hero() {
               className="block"
               initial={reduce ? false : { y: "110%" }}
               animate={reduce ? undefined : { y: 0 }}
-              transition={{ duration: 0.85, delay: 0.45, ease: [0.23, 1, 0.32, 1] }}
+              transition={{ duration: 0.85, delay: 0.45, ease: EASE_CURTAIN }}
             >
               Mesa
             </motion.span>
@@ -59,7 +60,7 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4"
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7, ease: [0.23, 1, 0.32, 1] }}
+          transition={{ duration: 0.8, delay: 0.7, ease: EASE_CURTAIN }}
         >
           <Link
             href="/agenda"
