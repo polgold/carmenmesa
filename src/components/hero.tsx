@@ -27,7 +27,7 @@ export function Hero() {
           className="eyebrow text-paper-soft mb-6"
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
         >
           Bailaora andaluza · Flamenco
         </motion.p>
@@ -38,7 +38,7 @@ export function Hero() {
               className="block"
               initial={reduce ? false : { y: "110%" }}
               animate={reduce ? undefined : { y: 0 }}
-              transition={{ duration: 1.0, delay: 0.4, ease: [0.2, 0.8, 0.2, 1] }}
+              transition={{ duration: 0.85, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
             >
               Carmen
             </motion.span>
@@ -48,7 +48,7 @@ export function Hero() {
               className="block"
               initial={reduce ? false : { y: "110%" }}
               animate={reduce ? undefined : { y: 0 }}
-              transition={{ duration: 1.0, delay: 0.55, ease: [0.2, 0.8, 0.2, 1] }}
+              transition={{ duration: 0.85, delay: 0.45, ease: [0.23, 1, 0.32, 1] }}
             >
               Mesa
             </motion.span>
@@ -59,7 +59,7 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4"
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
+          transition={{ duration: 0.8, delay: 0.7, ease: [0.23, 1, 0.32, 1] }}
         >
           <Link
             href="/agenda"
@@ -81,7 +81,7 @@ export function Hero() {
         className="absolute bottom-6 right-6 lg:right-12 z-10 flex items-center gap-3 text-muted text-[10px] tracking-[0.32em] uppercase"
         initial={reduce ? false : { opacity: 0 }}
         animate={reduce ? undefined : { opacity: 1 }}
-        transition={{ duration: 1.4, delay: 1.2 }}
+        transition={{ duration: 1.2, delay: 0.9 }}
       >
         <span className="block w-12 h-px bg-muted" />
         <span>scroll</span>

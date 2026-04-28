@@ -34,9 +34,9 @@ export function GalleryStrip({ photos }: { photos: Photo[] }) {
             whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
             transition={{
-              duration: 0.9,
+              duration: 0.7,
               delay: i * 0.08,
-              ease: [0.2, 0.8, 0.2, 1],
+              ease: [0.23, 1, 0.32, 1],
             }}
             className={[
               "relative overflow-hidden bg-surface group",
@@ -57,7 +57,7 @@ export function GalleryStrip({ photos }: { photos: Photo[] }) {
               sizes="(max-width: 768px) 50vw, 25vw"
               quality={88}
               priority={i < 2}
-              className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+              className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.06]"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] p-4 md:p-5 text-paper text-[11px] uppercase tracking-[0.24em] opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500">
@@ -139,8 +139,15 @@ function Lightbox({
           aria-label={photo.alt}
           initial={reduce ? { opacity: 1 } : { opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={reduce ? { opacity: 0 } : { opacity: 0 }}
-          transition={{ duration: 0.35, ease: [0.2, 0.8, 0.2, 1] }}
+          exit={
+            reduce
+              ? { opacity: 0 }
+              : {
+                  opacity: 0,
+                  transition: { duration: 0.22, ease: [0.4, 0, 1, 1] },
+                }
+          }
+          transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/95 backdrop-blur-sm"
           onClick={onClose}
           onTouchStart={onTouchStart}
@@ -186,10 +193,22 @@ function Lightbox({
 
           <motion.figure
             key={photo.src}
-            initial={reduce ? false : { opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.98 }}
-            transition={{ duration: 0.45, ease: [0.2, 0.8, 0.2, 1] }}
+            initial={
+              reduce
+                ? false
+                : { opacity: 0, scale: 0.96, filter: "blur(4px)" }
+            }
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            exit={
+              reduce
+                ? { opacity: 0 }
+                : {
+                    opacity: 0,
+                    scale: 0.98,
+                    transition: { duration: 0.22, ease: [0.4, 0, 1, 1] },
+                  }
+            }
+            transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
             className="relative w-[92vw] h-[78vh] md:w-[82vw] md:h-[82vh] max-w-[1400px]"
             onClick={(e) => e.stopPropagation()}
           >
