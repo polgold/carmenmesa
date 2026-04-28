@@ -151,7 +151,7 @@ function Lightbox({
             type="button"
             onClick={onClose}
             aria-label="Cerrar"
-            className="absolute top-5 right-5 md:top-8 md:right-8 z-10 text-paper text-[11px] uppercase tracking-[0.28em] inline-flex items-center gap-3 px-3 py-2 hover:text-rojo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
+            className="press absolute top-5 right-5 md:top-8 md:right-8 z-10 text-paper text-[11px] uppercase tracking-[0.28em] inline-flex items-center gap-3 px-3 py-2 hover:text-rojo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
           >
             Cerrar
             <span className="block w-6 h-px bg-current" />
@@ -166,7 +166,7 @@ function Lightbox({
                   onPrev();
                 }}
                 aria-label="Imagen anterior"
-                className="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 z-10 text-paper text-3xl md:text-4xl font-display leading-none w-12 h-12 md:w-14 md:h-14 flex items-center justify-center hover:text-rojo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
+                className="press absolute left-3 md:left-8 top-1/2 -translate-y-1/2 z-10 text-paper text-3xl md:text-4xl font-display leading-none w-12 h-12 md:w-14 md:h-14 flex items-center justify-center hover:text-rojo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
               >
                 ‹
               </button>
@@ -177,7 +177,7 @@ function Lightbox({
                   onNext();
                 }}
                 aria-label="Imagen siguiente"
-                className="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 z-10 text-paper text-3xl md:text-4xl font-display leading-none w-12 h-12 md:w-14 md:h-14 flex items-center justify-center hover:text-rojo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
+                className="press absolute right-3 md:right-8 top-1/2 -translate-y-1/2 z-10 text-paper text-3xl md:text-4xl font-display leading-none w-12 h-12 md:w-14 md:h-14 flex items-center justify-center hover:text-rojo transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rojo"
               >
                 ›
               </button>

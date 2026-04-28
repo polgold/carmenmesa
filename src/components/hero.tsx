@@ -63,14 +63,14 @@ export function Hero() {
         >
           <Link
             href="/agenda"
-            className="group relative inline-flex items-center gap-3 px-6 py-3.5 border border-paper/40 text-paper hover:border-paper transition-all"
+            className="group press relative inline-flex items-center gap-3 px-7 py-4 bg-rojo hover:bg-rojo-bright text-paper transition-colors"
           >
             <span className="text-[12px] uppercase tracking-[0.28em]">Ver agenda</span>
-            <span className="block w-6 h-px bg-paper transition-all duration-500 group-hover:w-10" />
+            <span className="block w-6 h-px bg-paper transition-all duration-300 group-hover:w-10" />
           </Link>
           <Link
             href="/contacto"
-            className="text-paper-soft hover:text-paper text-[12px] uppercase tracking-[0.28em]"
+            className="text-paper-soft hover:text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
           >
             <span className="link-underline">Contactar</span>
           </Link>

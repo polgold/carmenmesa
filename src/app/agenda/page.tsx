@@ -84,7 +84,7 @@ export default function AgendaPage() {
                 <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
                   <Link
                     href="/contacto"
-                    className="inline-flex items-center gap-3 px-6 py-3.5 bg-rojo hover:bg-rojo-bright text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
+                    className="press inline-flex items-center gap-3 px-6 py-3.5 bg-rojo hover:bg-rojo-bright text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
                   >
                     Contratar
                     <span className="block w-6 h-px bg-paper" />
@@ -93,7 +93,7 @@ export default function AgendaPage() {
                     href="https://www.facebook.com/carmen.mesa.52"
                     target="_blank"
                     rel="noopener"
-                    className="inline-flex items-center gap-3 px-6 py-3.5 border border-paper/30 hover:border-paper text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
+                    className="press inline-flex items-center gap-3 px-6 py-3.5 border border-paper/30 hover:border-paper text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
                   >
                     Facebook
                   </a>
@@ -135,7 +135,7 @@ export default function AgendaPage() {
                         href={s.ticketUrl}
                         target="_blank"
                         rel="noopener"
-                        className="inline-flex items-center gap-3 px-5 py-3 border border-paper/30 hover:border-paper text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
+                        className="press inline-flex items-center gap-3 px-5 py-3 border border-paper/30 hover:border-paper text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
                       >
                         {s.ticketLabel ?? "Entradas"}
                         <span className="block w-6 h-px bg-paper" />
@@ -232,14 +232,14 @@ export default function AgendaPage() {
               <div className="mt-12 flex flex-wrap gap-3">
                 <Link
                   href="/contacto?asunto=clase"
-                  className="inline-flex items-center gap-3 px-6 py-3.5 bg-paper text-ink text-[12px] uppercase tracking-[0.28em] hover:bg-oro transition-colors"
+                  className="press inline-flex items-center gap-3 px-6 py-3.5 bg-paper text-ink text-[12px] uppercase tracking-[0.28em] hover:bg-oro transition-colors"
                 >
                   Reservar lugar
                   <span className="block w-6 h-px bg-ink" />
                 </Link>
                 <Link
                   href="/contacto?asunto=privada"
-                  className="inline-flex items-center gap-3 px-6 py-3.5 border border-paper/30 hover:border-paper text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
+                  className="press inline-flex items-center gap-3 px-6 py-3.5 border border-paper/30 hover:border-paper text-paper text-[12px] uppercase tracking-[0.28em] transition-colors"
                 >
                   Clase particular
                 </Link>
