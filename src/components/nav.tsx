@@ -22,9 +22,6 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   return (
     <header
@@ -71,7 +68,7 @@ export function Nav() {
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden relative w-10 h-10 grid place-items-center text-paper"
+          className="press md:hidden relative w-10 h-10 grid place-items-center text-paper"
         >
           <span
             className={[
@@ -99,6 +96,7 @@ export function Nav() {
             <li key={l.href}>
               <Link
                 href={l.href}
+                onClick={() => setOpen(false)}
                 className="font-display text-3xl text-paper italic font-light"
               >
                 {l.label}

@@ -234,7 +234,7 @@ export default function Home() {
             <Reveal delay={0.3}>
               <Link
                 href="/contacto"
-                className="mt-10 inline-flex items-center gap-3 px-7 py-4 bg-rojo hover:bg-rojo-bright text-paper transition-colors"
+                className="press mt-10 inline-flex items-center gap-3 px-7 py-4 bg-rojo hover:bg-rojo-bright text-paper transition-colors"
               >
                 <span className="text-[12px] uppercase tracking-[0.28em]">
                   Escribir

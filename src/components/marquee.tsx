@@ -16,7 +16,7 @@ export function PlacesMarquee() {
         {[...items, ...items].map((item, i) => (
           <span
             key={i}
-            className="font-display italic font-light text-5xl md:text-7xl text-paper/30 hover:text-paper/80 transition-colors duration-700"
+            className="marquee-item font-display italic font-light text-5xl md:text-7xl"
           >
             {item}
             <span className="ml-16 text-rojo">·</span>

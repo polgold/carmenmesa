@@ -114,7 +114,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="group relative inline-flex items-center gap-3 px-7 py-4 bg-rojo hover:bg-rojo-bright text-paper text-[12px] uppercase tracking-[0.28em] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          className="group press relative inline-flex items-center gap-3 px-7 py-4 bg-rojo hover:bg-rojo-bright text-paper text-[12px] uppercase tracking-[0.28em] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
           <span>{pending ? "Enviando…" : "Enviar mensaje"}</span>
           <span className="block w-6 h-px bg-paper transition-all duration-500 group-hover:w-10" />
