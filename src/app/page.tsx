@@ -5,6 +5,7 @@ import { PlacesMarquee } from "@/components/marquee";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { GalleryStrip } from "@/components/gallery-strip";
+import { PressQuotes } from "@/components/press-quotes";
 
 const galleryPhotos = [
   { src: "/photos/photo-10.jpg", alt: "Carmen Mesa, retrato" },
@@ -84,6 +85,22 @@ export default function Home() {
       <PlacesMarquee />
 
       <section className="relative mx-auto max-w-7xl px-6 lg:px-12 py-32 md:py-40">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+          <SectionHeading eyebrow="Galería" title="Imágenes" italic="del baile." />
+          <Reveal>
+            <Link
+              href="/agenda#archivo"
+              className="text-paper text-[12px] uppercase tracking-[0.28em] inline-flex items-center gap-3"
+            >
+              <span className="link-underline">Archivo completo</span>
+              <span className="block w-8 h-px bg-paper" />
+            </Link>
+          </Reveal>
+        </div>
+        <GalleryStrip photos={galleryPhotos} />
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-6 lg:px-12 py-32 md:py-40 border-y border-line">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-7 relative">
             <Reveal>
@@ -148,53 +165,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-7xl px-6 lg:px-12 py-32 md:py-40 border-y border-line">
+      <section className="relative mx-auto max-w-7xl px-6 lg:px-12 py-32 md:py-40">
         <SectionHeading
           eyebrow="Prensa"
           title="Lo que dice"
           italic="la crítica."
         />
-        <div className="mt-16 grid md:grid-cols-3 gap-10 md:gap-14">
-          {[
-            { quote: "Una española para adorar.", source: "La Nación" },
-            { quote: "Andalusian pepper and cante.", source: "Buenos Aires Herald" },
-            {
-              quote: "La intensidad del proceso creativo del baile flamenco.",
-              source: "Festival de Sevilla",
-            },
-          ].map((q, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <figure className="flex flex-col gap-6 h-full">
-                <span className="font-display text-rojo text-6xl leading-none">
-                  &ldquo;
-                </span>
-                <blockquote className="font-display italic text-paper text-2xl md:text-3xl leading-tight font-light flex-1">
-                  {q.quote}
-                </blockquote>
-                <figcaption className="eyebrow flex items-center gap-3">
-                  <span className="block w-6 h-px bg-muted" />
-                  {q.source}
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="relative mx-auto max-w-7xl px-6 lg:px-12 py-32 md:py-40">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-          <SectionHeading eyebrow="Galería" title="Imágenes" italic="del baile." />
-          <Reveal>
-            <Link
-              href="/agenda#archivo"
-              className="text-paper text-[12px] uppercase tracking-[0.28em] inline-flex items-center gap-3"
-            >
-              <span className="link-underline">Archivo completo</span>
-              <span className="block w-8 h-px bg-paper" />
-            </Link>
-          </Reveal>
-        </div>
-        <GalleryStrip photos={galleryPhotos} />
+        <PressQuotes />
       </section>
 
       <section className="relative mx-auto max-w-7xl px-6 lg:px-12 pb-32 md:pb-48">

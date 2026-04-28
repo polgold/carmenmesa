@@ -24,9 +24,9 @@ export function Reveal({
       whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once, margin: "-10% 0px -10% 0px" }}
       transition={{
-        duration: 0.9,
+        duration: 0.7,
         delay,
-        ease: [0.2, 0.8, 0.2, 1],
+        ease: [0.23, 1, 0.32, 1],
       }}
       {...rest}
     >
@@ -60,9 +60,9 @@ export function RevealLetters({
             whileInView={reduce ? undefined : { y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{
-              duration: 0.9,
+              duration: 0.7,
               delay: delay + i * 0.06,
-              ease: [0.2, 0.8, 0.2, 1],
+              ease: [0.23, 1, 0.32, 1],
             }}
           >
             {w}
